@@ -1,0 +1,250 @@
+{
+  "tr": {
+    "header": {
+      "home": "Anasayfa",
+      "apps": "Uygulamalar (iOS & Google Play – Yakında)",
+      "poweredBy": "Gemini AI ile çalışır",
+      "login": "Google ile Giriş",
+      "logout": "Çıkış"
+    },
+    "hero": {
+      "title": "Trendleri keşfet, içeriğini daha akıllı üret.",
+      "description": "Yapay zekâ destekli platform; YouTube, Instagram, TikTok ve X için güncel başlık ve hashtag önerileri üretir. İçerik üreticilerin daha bilinçli kararlar almasına yardımcı olmak için tasarlanmıştır.",
+      "cta": "Başlık ve Hashtag Üret"
+    },
+    "generator": {
+      "sectionTitle": "İçerik Üretim Alanı",
+      "topic": "Konu / Anahtar Kelime",
+      "generate": "Üret",
+      "youtubeTitle": "YouTube Başlık Üret",
+      "youtubeTag": "YouTube Hashtag Üret",
+      "instagramTitle": "Instagram Başlık Üret",
+      "instagramTag": "Instagram Hashtag Üret",
+      "tiktokTitle": "TikTok Başlık Üret",
+      "tiktokTag": "TikTok Hashtag Üret",
+      "xTitle": "X Başlık Üret",
+      "xTag": "X Hashtag Üret"
+    },
+    "usage": {
+      "titleRemaining": "Başlık hakkı",
+      "tagRemaining": "Hashtag hakkı",
+      "watchAd": "Reklam izleyerek 1 ek üretim aç"
+    },
+    "warnings": {
+      "titleLimit": "Günlük başlık hakkın bitti. 1 ek başlık üretimi için reklam izle.",
+      "tagLimit": "Günlük hashtag hakkın bitti. 1 ek hashtag üretimi için reklam izle.",
+      "titleFormat": "Başlık 40 karakter olmalıdır (boşluklar dahil).",
+      "tagFormat": "Hashtag seti 59 karakteri geçemez.",
+      "policy": "Bu içerik politika kurallarına uymadığı için oluşturulmadı. Daha nötr bir ifade deneyin.",
+      "adRequired": "Reklam tamamlanmadan üretim açılamaz.",
+      "adFailed": "Reklam doğrulanamadı. Lütfen tekrar deneyin."
+    },
+    "adModal": {
+      "titleTitle": "1 Ek Başlık Üretimi Aç",
+      "tagTitle": "1 Ek Hashtag Üretimi Aç",
+      "description": "Reklam tamamlandıktan sonra 1 ek üretim açılır.",
+      "start": "Reklamı Başlat"
+    },
+    "mustHave": {
+      "title": "Sitenin Olmazsa Olmazları",
+      "items": [
+        "Politika uyumlu başlık ve hashtag önerileri",
+        "Başlıklar 40 karakter, hashtag setleri 59 karakter sınırında",
+        "Günlük 2 başlık + 2 hashtag hakkı",
+        "Hak biterse reklamla 1 ek üretim",
+        "6 dil desteği",
+        "Veri toplanmaz, yanıltıcı içerik üretilmez"
+      ]
+    },
+    "footer": {
+      "about": "Hakkımızda",
+      "press": "Basın Bülteni",
+      "faq": "Sıkça Sorulan Sorular",
+      "security": "Güvenlik",
+      "contact": "İletişim",
+      "help": "Yardım",
+      "disclaimer": "Öneriler yapay zekâ tarafından üretilir. Sonuçlar değişiklik gösterebilir. Bu platform YouTube, Instagram, TikTok, X veya Google ile resmî bağlantılı değildir."
+    }
+  },
+
+  "en": {
+    "header": {
+      "home": "Home",
+      "apps": "Apps (iOS & Google Play – Coming Soon)",
+      "poweredBy": "Powered by Gemini AI",
+      "login": "Sign in with Google",
+      "logout": "Logout"
+    },
+    "hero": {
+      "title": "Discover trends and create smarter content.",
+      "description": "An AI-powered platform that generates up-to-date title and hashtag suggestions for YouTube, Instagram, TikTok, and X. Built to help creators make informed decisions.",
+      "cta": "Generate Titles & Hashtags"
+    },
+    "generator": {
+      "sectionTitle": "Content Generator",
+      "topic": "Topic / Keyword",
+      "generate": "Generate",
+      "youtubeTitle": "Generate YouTube Title",
+      "youtubeTag": "Generate YouTube Hashtags",
+      "instagramTitle": "Generate Instagram Title",
+      "instagramTag": "Generate Instagram Hashtags",
+      "tiktokTitle": "Generate TikTok Title",
+      "tiktokTag": "Generate TikTok Hashtags",
+      "xTitle": "Generate X Title",
+      "xTag": "Generate X Hashtags"
+    },
+    "usage": {
+      "titleRemaining": "Title remaining",
+      "tagRemaining": "Hashtag remaining",
+      "watchAd": "Watch an ad to unlock 1 more"
+    },
+    "warnings": {
+      "titleLimit": "Your daily title limit has been reached. Watch an ad to unlock one more.",
+      "tagLimit": "Your daily hashtag limit has been reached. Watch an ad to unlock one more.",
+      "titleFormat": "Titles must be exactly 40 characters (including spaces).",
+      "tagFormat": "Hashtag sets cannot exceed 59 characters.",
+      "policy": "This content violates policy rules. Please try a more neutral wording.",
+      "adRequired": "You must complete the ad to continue.",
+      "adFailed": "Ad verification failed. Please try again."
+    },
+    "adModal": {
+      "titleTitle": "Unlock 1 Extra Title",
+      "tagTitle": "Unlock 1 Extra Hashtag Set",
+      "description": "After the ad is completed, one extra generation will be unlocked.",
+      "start": "Start Ad"
+    },
+    "mustHave": {
+      "title": "Platform Highlights",
+      "items": [
+        "Policy-compliant title and hashtag suggestions",
+        "40-character titles, 59-character hashtag limit",
+        "Daily 2 titles + 2 hashtags",
+        "Ad-based extra generation",
+        "6-language support",
+        "No misleading content, no data collection"
+      ]
+    },
+    "footer": {
+      "about": "About",
+      "press": "Press",
+      "faq": "FAQ",
+      "security": "Security",
+      "contact": "Contact",
+      "help": "Help",
+      "disclaimer": "AI-generated suggestions are for informational purposes only. Results may vary. Not affiliated with YouTube, Instagram, TikTok, X, or Google."
+    }
+  },
+
+  "de": {
+    "header": {
+      "home": "Startseite",
+      "apps": "Apps (iOS & Google Play – Demnächst)",
+      "poweredBy": "Betrieben mit Gemini AI",
+      "login": "Mit Google anmelden",
+      "logout": "Abmelden"
+    },
+    "hero": {
+      "title": "Entdecke Trends und erstelle smarteren Content.",
+      "description": "Eine KI-gestützte Plattform zur Erstellung aktueller Titel- und Hashtag-Vorschläge für YouTube, Instagram, TikTok und X.",
+      "cta": "Titel & Hashtags erstellen"
+    },
+    "generator": {
+      "sectionTitle": "Content-Generator",
+      "topic": "Thema / Schlüsselwort",
+      "generate": "Erstellen",
+      "youtubeTitle": "YouTube-Titel erstellen",
+      "youtubeTag": "YouTube-Hashtags erstellen",
+      "instagramTitle": "Instagram-Titel erstellen",
+      "instagramTag": "Instagram-Hashtags erstellen",
+      "tiktokTitle": "TikTok-Titel erstellen",
+      "tiktokTag": "TikTok-Hashtags erstellen",
+      "xTitle": "X-Titel erstellen",
+      "xTag": "X-Hashtags erstellen"
+    },
+    "usage": {
+      "titleRemaining": "Verbleibende Titel",
+      "tagRemaining": "Verbleibende Hashtags",
+      "watchAd": "Werbung ansehen, um 1 freizuschalten"
+    },
+    "warnings": {
+      "titleLimit": "Dein tägliches Titellimit ist erreicht. Sieh dir eine Werbung an, um einen weiteren freizuschalten.",
+      "tagLimit": "Dein tägliches Hashtag-Limit ist erreicht. Sieh dir eine Werbung an, um einen weiteren freizuschalten.",
+      "titleFormat": "Titel müssen genau 40 Zeichen lang sein (inkl. Leerzeichen).",
+      "tagFormat": "Hashtag-Sets dürfen 59 Zeichen nicht überschreiten.",
+      "policy": "Dieser Inhalt verstößt gegen die Richtlinien. Bitte neutraler formulieren.",
+      "adRequired": "Die Werbung muss vollständig angesehen werden.",
+      "adFailed": "Werbung konnte nicht bestätigt werden."
+    },
+    "adModal": {
+      "titleTitle": "1 zusätzlichen Titel freischalten",
+      "tagTitle": "1 zusätzliches Hashtag-Set freischalten",
+      "description": "Nach Abschluss der Werbung wird eine zusätzliche Erstellung freigeschaltet.",
+      "start": "Werbung starten"
+    },
+    "mustHave": {
+      "title": "Plattform-Vorteile",
+      "items": [
+        "Richtlinienkonforme Vorschläge",
+        "40-Zeichen-Titel, 59-Zeichen-Hashtags",
+        "Täglich 2 Titel + 2 Hashtags",
+        "Zusätzliche Nutzung per Werbung",
+        "6 Sprachen",
+        "Keine Datenspeicherung"
+      ]
+    },
+    "footer": {
+      "about": "Über uns",
+      "press": "Presse",
+      "faq": "FAQ",
+      "security": "Sicherheit",
+      "contact": "Kontakt",
+      "help": "Hilfe",
+      "disclaimer": "KI-generierte Vorschläge dienen nur zur Information. Keine offizielle Verbindung zu Plattformen."
+    }
+  },
+
+  "es": {
+    "header": {
+      "home": "Inicio",
+      "apps": "Aplicaciones (iOS y Google Play – Próximamente)",
+      "poweredBy": "Impulsado por Gemini AI",
+      "login": "Iniciar sesión con Google",
+      "logout": "Cerrar sesión"
+    },
+    "hero": {
+      "title": "Descubre tendencias y crea contenido inteligente.",
+      "description": "Plataforma con IA que genera títulos y hashtags actualizados para YouTube, Instagram, TikTok y X.",
+      "cta": "Generar títulos y hashtags"
+    }
+  },
+
+  "fr": {
+    "header": {
+      "home": "Accueil",
+      "apps": "Applications (iOS et Google Play – Bientôt)",
+      "poweredBy": "Propulsé par Gemini AI",
+      "login": "Connexion avec Google",
+      "logout": "Déconnexion"
+    },
+    "hero": {
+      "title": "Découvrez les tendances et créez du contenu intelligent.",
+      "description": "Plateforme alimentée par l’IA pour générer des titres et hashtags à jour pour YouTube, Instagram, TikTok et X.",
+      "cta": "Générer titres et hashtags"
+    }
+  },
+
+  "pt": {
+    "header": {
+      "home": "Início",
+      "apps": "Aplicativos (iOS e Google Play – Em breve)",
+      "poweredBy": "Com tecnologia Gemini AI",
+      "login": "Entrar com Google",
+      "logout": "Sair"
+    },
+    "hero": {
+      "title": "Descubra tendências e crie conteúdo inteligente.",
+      "description": "Plataforma com IA que gera títulos e hashtags atualizados para YouTube, Instagram, TikTok e X.",
+      "cta": "Gerar títulos e hashtags"
+    }
+  }
+}
