@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoSocial_Rose | Profesyonel İçerik Çözümleri</title>
 
+    <!-- EKLENDİ: Canonical (standart sayfa) -->
+    <link rel="canonical" href="https://jarvisheyrose.com/" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        :root {
+            --rose-primary: #f43f5e;
+            --bg-deep: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-deep);
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top, rgba(244, 63, 94, 0.08) 0%, transparent 60%);
+        }
+
+        .section-hidden { display: none; }
+        
+        .tool-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            border-color: var(--rose-primary);
+            background: rgba(244, 63, 94, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .tool-card.active {
+            border-color: var(--rose-primary);
+            background: rgba(244, 63, 94, 0.15);
+            box-shadow: 0 0 25px rgba(244, 63, 94, 0.1);
+        }
+
+        textarea {
+            background: rgba(15, 23, 42, 0.8) !important;
+            color: white !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+        }
+    </style>
+</head>
+<body class="hero-gradient min-h-screen flex flex-col">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="showSection('home')">
+                <div class="w-8 h-8 bg-rose-600 rounded-lg flex items-center justify-center shadow-lg shadow-rose-900/40">
+                    <i class="fas fa-bolt text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter uppercase">NEOSOCIAL<span class="text-rose-500">_ROSE</span></span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-400">
+                <a href="javascript:void(0)" onclick="showSection('home')" class="hover:text-rose-500 transition">Anasayfa</a>
+                <a href="javascript:void(0)" onclick="showSection('apps')" class="hover:text-rose-500 transition">Platform</a>
+                <a href="javascript:void(0)" onclick="showSection('about')" class="hover:text-rose-500 transition">Hakkımızda</a>
+                <!-- EKLENDİ: Basın -->
+                <a href="javascript:void(0)" onclick="showSection('press')" class="hover:text-rose-500 transition">Basın</a>
+                <!-- EKLENDİ: Kariyer -->
+                <a href="javascript:void(0)" onclick="showSection('career')" class="hover:text-rose-500 transition">Kariyer</a>
+                <!-- EKLENDİ: İletişim -->
+                <a href="javascript:void(0)" onclick="showSection('contact')" class="hover:text-rose-500 transition">İletişim</a>
+            </div>
+
+            <button onclick="handleAuth()" id="auth-btn" class="bg-rose-600 hover:bg-rose-500 px-6 py-2.5 rounded-full text-xs font-black transition-all transform hover:scale-105">
+                GİRİŞ YAP
+            </button>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20 px-6 max-w-7xl mx-auto w-full">
+        
+        <section id="section-home" class="py-20 text-center space-y-8">
+            <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tighter italic">İÇERİĞİN <br><span class="text-rose-600">VİRAL</span> OLSUN.</h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto font-medium">Yapay zeka destekli NeoSocial_Rose motoru ile sosyal medyada fark yaratın.</p>
+            <button onclick="showSection('apps')" class="bg-white text-black px-12 py-5 rounded-2xl font-black hover:bg-rose-500 hover:text-white transition-all">HEMEN BAŞLA</button>
+        </section>
+
+        <section id="section-apps" class="section-hidden max-w-3xl mx-auto space-y-10">
+            <div class="grid grid-cols-2 gap-4">
+                <div onclick="setTool('YouTube', this)" class="tool-card active p-10 rounded-[2rem] text-center border">
+                    <i class="fab fa-youtube text-rose-600 text-4xl mb-4"></i>
+                    <span class="block font-black uppercase tracking-widest text-xs">YouTube</span>
+                </div>
+                <div onclick="setTool('TikTok', this)" class="tool-card p-10 rounded-[2rem] text-center border">
+                    <i class="fab fa-tiktok text-white text-4xl mb-4"></i>
+                    <span class="block font-black uppercase tracking-widest text-xs">TikTok</span>
+                </div>
+            </div>
+
+            <div class="glass p-10 rounded-[3rem] border-slate-800 space-y-6 shadow-2xl">
+                <textarea id="topic" rows="3" class="w-full p-6 rounded-3xl outline-none focus:border-rose-500 text-lg resize-none" placeholder="İçerik konusu nedir?"></textarea>
+                <button onclick="runEngine()" id="gen-btn" class="w-full bg-rose-600 py-6 rounded-3xl font-black text-xl hover:bg-rose-500 transition shadow-xl shadow-rose-900/20">ÜRETİMİ BAŞLAT</button>
+                <div id="result-box" class="hidden p-8 bg-slate-900 border border-rose-500/20 rounded-3xl relative mt-6">
+                    <p id="result-text" class="text-xl font-bold leading-relaxed pr-10"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-about" class="section-hidden py-10">
+            <div class="glass p-12 rounded-[3rem] border-slate-800 max-w-4xl mx-auto">
+                <h2 class="text-4xl font-black mb-6 italic">Vizyonumuz</h2>
+                <p class="text-slate-400 leading-loose text-lg">NeoSocial_Rose, içerik üretimini profesyonel bir seviyeye taşımak için tasarlandı. Saniyeler içinde viral potansiyeli yüksek stratejiler geliştiriyoruz.</p>
+            </div>
+        </section>
+
+        <!-- EKLENDİ: Basın -->
+        <section id="section-press" class="section-hidden py-10">
+            <div class="glass p-12 rounded-[3rem] border-slate-800 max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-black mb-6 italic">Basın</h2>
+                <p class="text-slate-400 leading-loose text-lg">Basın sayfamız yakında aktif olacaktır.</p>
+            </div>
+        </section>
+        <!-- EKLENDİ: Basın -->
+
+        <!-- EKLENDİ: Kariyer -->
+        <section id="section-career" class="section-hidden py-10">
+            <div class="glass p-12 rounded-[3rem] border-slate-800 max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-black mb-6 italic">Kariyer</h2>
+                <p class="text-slate-400 leading-loose text-lg">Kariyer sayfamız yakında aktif olacaktır.</p>
+            </div>
+        </section>
+        <!-- EKLENDİ: Kariyer -->
+
+        <!-- EKLENDİ: İletişim -->
+        <section id="section-contact" class="section-hidden py-10">
+            <div class="glass p-12 rounded-[3rem] border-slate-800 max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-black mb-6 italic">İletişim</h2>
+                <p class="text-slate-400 text-lg font-medium mb-4">E-posta</p>
+                <p class="text-rose-500 text-xl font-black mb-2">jarvisheyrose@gmail.com</p>
+                <p class="text-slate-400">Size en kısa sürede dönüş yapacağız.</p>
+            </div>
+        </section>
+        <!-- EKLENDİ: İletişim -->
+
+    </main>
+
+    <footer class="border-t border-slate-900 pt-10 pb-10 text-center text-[10px] font-black text-slate-600 tracking-widest uppercase">
+        © 2026 NEOSOCIAL_ROSE ENGINE. POWERED BY JARVISHEYROSE.
+    </footer>
+
+    <script>
+        let currentTool = "YouTube";
+
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('section-hidden'));
+            document.getElementById('section-' + id).classList.remove('section-hidden');
+            window.scrollTo(0,0);
+        }
+
+        function setTool(tool, el) {
+            currentTool = tool;
+            document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        async function runEngine() {
+            const topic = document.getElementById('topic').value;
+            if(!topic) return;
+            const btn = document.getElementById('gen-btn');
+            btn.innerText = "ÜRETİLİYOR...";
+            try {
+                const res = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topic, type: currentTool })
+                });
+                const data = await res.json();
+                document.getElementById('result-text').innerText = data.result;
+                document.getElementById('result-box').classList.remove('hidden');
+            } catch (e) {
+                alert("Hata oluştu!");
+            }
+            btn.innerText = "ÜRETİMİ BAŞLAT";
+        }
+    </script>
+</body>
+</html>
